@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Generic
-description: Lorem ipsum dolor est
+title: 个人简历
+description: This is my resume
 image: assets/images/pic11.jpg
 nav-menu: true
 ---
