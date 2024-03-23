@@ -16,29 +16,28 @@ nav-menu: true
 			<h2>项目经历 Projects</h2>
 		</header>
 		<p>这里记录了我从大学开始参加的项目，包括AI应用开发，web端程序开发，个人博客开发，网络攻防等等</p>
-		<p>This documents the projects I've been involved in since university, including AI application development, web-based program development, personal blog development, network security, and more.</p>
 	</div>
 </section>
 
 <!-- Two -->
 <section id="two" class="spotlights">
 	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/pic08.jpg %}" alt="" data-position="center center" />
+		<a href="content/mit_6.858.html" class="image">
+			<img src="{% link assets/images/mit_6.858.png %}" alt="" data-position="center center" />
 		</a>
 		<div class="content">
 			<div class="inner">
 				<header class="major">
-					<h3>Orci maecenas</h3>
+					<h3>MIT_6.858 Web Security</h3>
 				</header>
-				<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
+				<p>MIT_6.858是MIT 的计算机系统安全课程，实验环境是一个 Web Application Zoobar。学生学习攻防技术并应用于该 Web Application。在实验中需要实现一个基于符号执行的程序分析工具，用于查找 Python 代码中的错误，例如 Zoobar Web 应用程序中的错误 </p>
 				<ul class="actions">
-					<li><a href="generic.html" class="button">Learn more</a></li>
+					<li><a href="content/mit_6.858.html" class="button">Learn more</a></li>
 				</ul>
 			</div>
 		</div>
 	</section>
-	<section>
+	<!-- <section>
 		<a href="generic.html" class="image">
 			<img src="{% link assets/images/pic09.jpg %}" alt="" data-position="top center" />
 		</a>
@@ -69,11 +68,11 @@ nav-menu: true
 				</ul>
 			</div>
 		</div>
-	</section>
+	</section> -->
 </section>
 
 <!-- Three -->
-<section id="three">
+<!-- <section id="three">
 	<div class="inner">
 		<header class="major">
 			<h2>Massa libero</h2>
@@ -83,6 +82,6 @@ nav-menu: true
 			<li><a href="generic.html" class="button next">Get Started</a></li>
 		</ul>
 	</div>
-</section>
+</section> -->
 
 </div>
