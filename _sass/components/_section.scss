@@ -26,7 +26,6 @@
 				  width: calc(100% + 0.5em);
 
 				  &:after {
-					    content: '';
 					    background-color: _palette(fg-bold);
 					    display: block;
 					    height: 2px;
