@@ -14,18 +14,98 @@
 
     <!-- Banner -->
     <section id="banner" class="major" >
-        <div class="inner">
-            <header class="major">
-                <div style="display: flex;align-items: center;flex-direction: row;" class="horizontal-layout">
-                    <img style="width: 250px; height: 250px; border-radius: 50%; object-fit: cover; margin-top: 20px;" src="{{page.image}}"/>
-                    <h1 style="margin-left: 200px;align-items: center">{{ page.landing-title }}</h1>
-                </div>
-            </header>
-            <div class="content">
-                <h2 style="text-transform: uppercase;">{{ page.description }}</h2>
+    <div class="inner" style="max-width:1200px; margin:auto;">
+
+        <div style="display:flex; gap:80px; align-items:flex-start; flex-wrap:wrap;">
+
+            <!-- LEFT: Avatar + Name + Roles -->
+            <div style="text-align:center; min-width:260px; margin-top: 60px;">
+                <img 
+                src="{{ page.image }}" 
+                style="width:180px; height:180px; border-radius:50%; object-fit:cover; border:4px solid #6d6454;"
+                />
+
+                <h1 style="margin-top:20px; font-size:2rem; color:white;">
+                {{ page.name1 }}
+                </h1>
+
+<!-- 
+                <h1 style="margin-top:20px; font-size:2rem; color:white;">
+                {{ page.title }}
+                </h1> -->
+
+                <h2 style="margin-top:10px; font-size:1.5rem; font-weight:400; color:#e8ddca;">
+                {{ page.title }}
+                </h2>
+
+                <h2 style="margin-top:10px; font-size:1.3rem; font-weight:400; color:#e8ddca;">
+                {{ page.title1 }}
+                </h2>
+
+                <ul class="icons" style="margin-top: 20px;">
+				{% for key_value in site.socials %}
+					{% if key_value[1] %}
+						<li>
+							<a href="{{ key_value[1] }}" class="icon alt fa-{{ key_value[0] | downcase }}" target="_blank" rel="noopener noreferrer" aria-label="{{ key_value[0] }}">
+								<span class="label">{{ key_value[0] }}</span>
+							</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+                <li> 
+					<a href="{{ page.cv }}" 
+						class="icon alt fa-solid fa-user" 
+						target="_blank" 
+						rel="noopener noreferrer" 
+						aria-label="Download CV">
+						<span class="label">CV</span>
+					</a>
+				</li>
+			    </ul>
             </div>
+
+
+            <!-- RIGHT: About Me -->
+            <div style="flex:1; color:white; min-width:350px;">
+
+                <!-- ABOUT ME -->
+                <h2 style="font-size:1.8rem; margin-bottom:10px;">About Me</h2>
+
+                <p style="color:#e8ddca; line-height:1.7;">
+                {{ page.about }}
+                </p>
+                
+                <div style="display:flex; gap:80px; margin-top:0px; flex-wrap:wrap;">
+                    <!-- INTERESTS -->
+                    <div>
+                    <h2 style="margin-top:0px; font-size:1.6rem;">Interests</h2>
+                    <ul style="color:#e8ddca; line-height:1.8;">
+                    {% for item in page.interests %}
+                        <li>{{ item }}</li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+
+                    <!-- EDUCATION -->
+                    <div>
+                    <h2 style="margin-top:0px; font-size:1.6rem;">Education</h2>
+                    <ul style="color:#e8ddca; line-height:1.8;">
+                    {% for edu in page.education %}
+                        <li>
+                        <strong>{{ edu.degree }}</strong><br/>
+                        {{ edu.school }}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    </div>
+                </div>
+
         </div>
+
+        </div>
+    </div>
     </section>
+
 
     <!-- Main -->
     <div id="main">

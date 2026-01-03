@@ -1,16 +1,15 @@
 # site settings
 title: Ziqi
-subtitle: by HTML5 UP
-email: 245231528@qq.com
+subtitle: '@Dartmouth College'
+email: strand314177@gmail.com
 description: This is my personal website powered by Jekyll and hosted on GitHub Pages.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author: Ziqi
-street_address: Sichuan University Jiang'an Campus
-city: Chengdu
-state: Sichuan
-country: China
-phone: (+86) 13035610707
+street_address: Dartmouth College 
+city: Hanover
+state: New Hampshire
+country: United State
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
@@ -22,6 +21,7 @@ tiles-count: 6
 # You need to restart jekyll for changes to have an effect
 socials:
   GitHub: https://github.com/CyberStrand
+  Linkedin: https://www.linkedin.com/in/ziqi-tian-229075308/
 
 # build settings
 markdown: kramdown
