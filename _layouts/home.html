@@ -123,7 +123,7 @@
         if (!avatar) return;
 
         var slides = [
-            {% assign self_photos = site.static_files | where_exp: "f", "f.path contains '/assets/images/self/'" | where_exp: "f", "f.extname == '.jpg' or f.extname == '.jpeg' or f.extname == '.png'" | sort: "name" -%}
+            {% assign self_photos = site.static_files | where_exp: "f", "f.path contains '/assets/images/self/'" | sort: "name" -%}
             {% for file in self_photos -%}
             {% case file.name -%}
                 {% when 'self0.jpg' %}{% assign pos = 'center 35%' %}
