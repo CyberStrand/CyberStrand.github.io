@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stylized flame based on Unity shader graph
+title: Stylized Flame Shader in Unity
 description: These are my skills
 image: assets/images/VFX.png
 nav-menu: false
@@ -13,11 +13,11 @@ show_tile: false
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/a2wkTQfBu7k?si=Q5ZXX9uabGPfYc8r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<p>This is a stylized flame effect made with Unity shader graph, artists can customize the range and color of different layers of the flame. This shader code can turn a simple black and white 2D texture into a vivid and glooming flame.</p>
+<p>A stylized flame effect built with Unity's Shader Graph. Artists can customize the range and color of each flame layer, and the shader turns a simple black-and-white texture into a vivid, glowing flame.</p>
 
 <img src="{% link assets/images/shader_flame.png %}" alt="" data-position="center center" />
 
-<p>The shader code is composed of three parts: scrolling effect, masking effect, color rendering.</p>
+<p>The shader is built from three parts: a scrolling effect, a masking effect, and color rendering.</p>
 
 <p>The scrolling effect creates the illusion of dynamic movement, simulating the way fire flickers and shifts. By manipulating the texture coordinates, the flame appears to 'flow' in various directions, adding realism to the otherwise static texture.</p>
 

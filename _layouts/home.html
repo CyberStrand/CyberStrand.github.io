@@ -20,9 +20,10 @@
 
             <!-- LEFT: Avatar + Name + Roles -->
             <div style="text-align:center; min-width:260px; margin-top: 60px;">
-                <img 
-                src="{{ page.image }}" 
-                style="width:180px; height:180px; border-radius:50%; object-fit:cover; border:4px solid #6d6454;"
+                <img
+                id="avatar-slideshow"
+                src="{{ page.image }}"
+                style="width:180px; height:180px; border-radius:50%; object-fit:cover; object-position: center 25%; border:4px solid #6d6454; transition: opacity 0.5s ease;"
                 />
 
                 <h1 style="margin-top:20px; font-size:2rem; color:white;">
@@ -110,12 +111,56 @@
     <!-- Main -->
     <div id="main">
 
-        <!-- One -->
-        {% include tiles.html %}
+        {{ content }}
 
     </div>
 
     {% include footer.html %}
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var avatar = document.getElementById('avatar-slideshow');
+        if (!avatar) return;
+
+        var slides = [
+            {% assign self_photos = site.static_files | where_exp: "f", "f.path contains '/assets/images/self/'" | where_exp: "f", "f.extname == '.jpg' or f.extname == '.jpeg' or f.extname == '.png'" | sort: "name" -%}
+            {% for file in self_photos -%}
+            {% case file.name -%}
+                {% when 'self0.jpg' %}{% assign pos = 'center 35%' %}
+                {% when 'self1.jpg' %}{% assign pos = 'center 25%' %}
+                {% when 'self2.jpg' %}{% assign pos = '78% 62%' %}
+                {% when 'self3.jpg' %}{% assign pos = 'center 40%' %}
+                {% when 'self4.jpg' %}{% assign pos = '42% 42%' %}
+                {% when 'self5.jpg' %}{% assign pos = '62% 68%' %}
+                {% when 'self6.jpg' %}{% assign pos = 'center 65%' %}
+                {% when 'self7.jpg' %}{% assign pos = '65% 50%' %}
+                {% when 'self8.jpg' %}{% assign pos = '70% 30%' %}
+                {% else %}{% assign pos = 'center center' %}
+            {% endcase -%}
+            { src: '{{ file.path | relative_url | remove_first: "/" }}?t={{ file.modified_time | date: "%s" }}', position: '{{ pos }}' },
+            {% endfor -%}
+        ];
+
+        if (slides.length === 0) return;
+
+        var index = 0;
+        var intervalMs = 4000;
+        var fadeMs = 500;
+
+        avatar.src = slides[0].src;
+        avatar.style.objectPosition = slides[0].position;
+
+        setInterval(function () {
+            index = (index + 1) % slides.length;
+            avatar.style.opacity = 0;
+            setTimeout(function () {
+                avatar.src = slides[index].src;
+                avatar.style.objectPosition = slides[index].position;
+                avatar.style.opacity = 1;
+            }, fadeMs);
+        }, intervalMs);
+    });
+    </script>
 
 </body>
 

@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Oil painting effect based on Blender Geometry Node
+title: Oil Painting Shader with Blender Geometry Nodes
 description: These are my skills
 nav-menu: false
 show_tile: false
 ---
 <iframe width="1120" height="620" src="https://www.youtube.com/embed/NjkYFMJRgqE?si=2a5drki66tdyRpEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<p>This is oil Painting effect build with Blender Geometry Nodes, the materials is collected from famous artist Vincent Willem van Gogh's oil-painting work. This tool can directly apply oil-painting effect to object in Blender with no extra efforts in texturing and shading.</p>
+<p>An oil-painting shader built with Blender's Geometry Nodes, using textures sourced from Vincent van Gogh's paintings. The shader applies a convincing oil-painting look to any object in Blender, with no extra texturing or shading work required.</p>
 
-<h2>Here's how it is developed</h2>
-<p>I find a artwork of Vincent Willem van Gogh which I like and cut the part that suits for the ocean texture(it is sky actually but work out fine)</P>
+<h2>How It Was Made</h2>
+<p>I found a Vincent van Gogh painting I liked and cropped the section that best suited an ocean texture — it's actually a sky in the original, but the brushwork translates surprisingly well to water.</p>
 <img src="{% link assets/images/oil_painting/source.jpg %}" alt="" data-position="center center" />
-<p>Then I get a texture like this</p>
+<p>This gave me a texture like the one below.</p>
 <img width="20%" src="{% link assets/images/oil_painting/tex.jpg %}" alt="" data-position="center center" />
-<p>However, when applying a texture to an object the texture is usually tiled to fit for the size of the surface, which leads to a problem of the border line.</p>
+<p>However, when a texture is applied to an object, it's usually tiled to cover the full surface — and tiling introduces visible seams at the tile borders.</p>
 <img src="{% link assets/images/oil_painting/tiling.png %}" alt="" data-position="center center" />
-<p>We can clearly see the cross lines between the textures when tiled into 2x2 in the picture. To deal with this, I used histogram-preserving blending tool to transform the image to tileable</p>
+<p>You can clearly see the seams forming a cross pattern where the four tiles meet. To fix this, I used a histogram-preserving blending tool to make the texture tileable.</p>
 <img src="{% link assets/images/oil_painting/copy_right.png %}" alt="" data-position="center center" />
-<p>And got this:</p>
+<p>The result:</p>
 <img width="20%" src="{% link assets/images/oil_painting/tex_tileable.png %}" alt="" data-position="center center" />
-<p>Now the texture is tileable and has smooth transition between different tiles</p>
+<p>Now the texture tiles seamlessly, with a smooth transition between each repeat.</p>
 <img src="{% link assets/images/oil_painting/tileable_tiling.png %}" alt="" data-position="center center" />
-<p>Then I use Geometry Node in Blender, which is similar to Shader Graph, to implement the texture to the surface and add more options for customization.</p>
+<p>I then used Blender's Geometry Nodes — a node-based workflow similar to a shader graph — to apply the texture to the surface and expose additional parameters for customization.</p>
 <img src="{% link assets/images/oil_painting/detail.png %}" alt="" data-position="center center" />
-<p>Now the ocean is shaded with oil-painting effect</p>
+<p>The final result: an ocean surface shaded with a hand-crafted oil-painting look.</p>
 <img src="{% link assets/images/oil_painting/oil_ocean.png %}" alt="" data-position="center center" />
