@@ -22,6 +22,15 @@ show_tile: false
 }
 </style>
 
+<h2>1st Prize in Dartmouth Rendering Competition 2025</h2>
+<img src="{% link assets/images/darts/winner.jpg %}?v=3" alt="winner prize" />
+
+<p>Judges team (left to right):<br>
+Lorie Loeb @Dartmouth College<br>
+Derek Nowrouzezahrai @McGill University<br>
+YINING KARL LI @Walt Disney Animation Studios<br>
+Wojciech Jarosz @Dartmouth College</p>
+
 <h2>Features and Points</h2>
 
 <ul>
@@ -144,9 +153,6 @@ show_tile: false
 
 <h2>Final Scene</h2>
 <img src="{% link assets/images/darts/Finalone.jpg %}?v=3" alt="Final scene" />
-
-<h2>I won the prize!</h2>
-<img src="{% link assets/images/darts/winner.jpg %}?v=3" alt="winner prize" />
 
 <script src="{{ "assets/js/twentytwenty/jquery.event.move.js" | relative_url }}" defer></script>
 <script src="{{ "assets/js/twentytwenty/jquery.twentytwenty.js" | relative_url }}" defer></script>

@@ -41,6 +41,23 @@ show_tile: false
 		</div>
 	</section>
 	<section>
+		<a href="content/cyboracle.html" class="image">
+			<img src="assets/images/cyboracle/dream_studio.png"/>
+			<video src="assets/videos/cyboracle_preview.mp4?v=1" muted loop playsinline preload="auto"></video>
+		</a>
+		<div class="content">
+			<div class="inner">
+				<header class="major">
+					<h3>Motion Capture for Cyboracle in the Nonaverse</h3>
+				</header>
+				<p>As a Research Assistant at Dartmouth's DREAM Studio, I set up the motion capture system and post-processed the captured animation in Maya for Cyboracle in the Nonaverse, a VR and AI concert experience built around musician Nona Hendryx's digital avatar.</p>
+				<ul class="actions">
+					<li><a href="content/cyboracle.html" class="button">Learn more</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section>
 		<a href="content/howls-castle.html" class="image">
 			<img src="assets/images/3D-modeling/image0.jpeg"/>
 			<video src="assets/videos/howls_castle_preview.mp4?v=2" muted loop playsinline preload="auto"></video>
